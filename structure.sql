@@ -13,7 +13,7 @@ art_like int(11) not null,
 
 art_dislike int(11) not null,
 
-art_public tinyint(11) not null
+art_public tinyint(1) not null
 
 ) engine=innodb character set utf8 collate utf8_unicode_ci;
 
