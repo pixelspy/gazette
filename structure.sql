@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS `article`;
-CREATE TABLE IF NOT EXISTS 'article' (
+CREATE TABLE IF NOT EXISTS `article` (
 
 art_id integer not null primary key auto_increment,
 
