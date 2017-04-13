@@ -1,7 +1,7 @@
 <?php
 function getArticles(){
   $connect = connect();
-  $articles = $connect->query('SELECT * FROM `articles` ');
+  $articles = $connect->query('SELECT * FROM `article` ');
   return $articles;
 }
 
@@ -12,6 +12,10 @@ function getUsers(){
 }
 
 function connect(){
-  $connect = new PDO('mysql:host=localhost;dbname=gazette;charset=utf8', 'root', 'simplon');
-  return $connect;
+	try {
+		$connect = new PDO('mysql:host=localhost;dbname=gazette2;charset=utf8', 'phpmyadmin', 'max');
+		return $connect;
+	} catch (Exception $e) {
+		die('Erreur :' .$e->getMessage() ); 
+	}
 }
