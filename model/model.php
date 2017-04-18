@@ -13,7 +13,7 @@ function getUsers(){
 
 function connect(){
 	try {
-		$connect = new PDO('mysql:host=localhost;dbname=gazette2;charset=utf8', 'phpmyadmin', 'max');
+		$connect = new PDO('mysql:host= . $_POST['host'] . ;dbname= . $_POST['database'] . ;charset=utf8', '$_POST['user']', '$_POST['passwd']');
 		return $connect;
 	} catch (Exception $e) {
 		die('Erreur :' .$e->getMessage() ); 
